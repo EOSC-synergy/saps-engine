@@ -1,6 +1,16 @@
 # .sqa/config.yml - jenkins-pipeline-library configuration file
 config:
   project_repos:
-    myrepo:
+    saps-engine:
       repo: 'https://github.com/EOSC-synergy/saps-engine'
       branch: develop
+
+sqa_criteria:
+  qc_style:
+    repos:
+      saps-engine:
+        container: processing
+        tox:
+          testenv:
+             - stylecheck
+
